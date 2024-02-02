@@ -1,0 +1,25 @@
+{
+  "name": "uiashtml",
+  "version": "1.0.0",
+  "description": "Static Html files for assisting crudgenbypath",
+  "main": "forSashank.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/keshavsoft/UiAsHtml.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/keshavsoft/UiAsHtml/issues"
+  },
+  "homepage": "https://github.com/keshavsoft/UiAsHtml#readme",
+  "dependencies": {
+    "fs-extra": "^11.2.0",
+    "os": "^0.1.2",
+    "posthtml": "^0.16.6",
+    "posthtml-include": "^1.7.4"
+  }
+}
