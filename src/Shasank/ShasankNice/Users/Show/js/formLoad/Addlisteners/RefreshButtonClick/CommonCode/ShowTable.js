@@ -8,7 +8,7 @@ const StartFunc = () => {
     $table.bootstrapTable('destroy');
 
     $table.bootstrapTable({
-        onPostBody: function () {
+        onPostBody: function() {
             $(".fixed-table-toolbar .search .search-input").focus()
         },
         // onClickRow: LocalOnClickRow,
@@ -27,7 +27,7 @@ const JFLocalColumns = () => {
     JVarLocalColumnsArray.push({ formatter: "operateFormatter", title: "Edit" })
 
     // this is to nagivate to image upload
-    JVarLocalColumnsArray.push({ formatter: "ImageFormatter", title: "Image" })
+    // JVarLocalColumnsArray.push({ formatter: "ImageFormatter", title: "Image" })
 
     JVarLocalColumnsArray.push(...LocalColumnsKeysArray.map(element => {
         let LocalObj = {};
