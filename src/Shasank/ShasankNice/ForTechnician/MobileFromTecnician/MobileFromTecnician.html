@@ -226,7 +226,7 @@
 
                     <a class="nav-link nav-profile d-flex align-items-center pe-0" href="#" data-bs-toggle="dropdown">
                         <img src="../../assets/img/profile-img.jpg" alt="Profile" class="rounded-circle">
-                        <span class="d-none d-md-block dropdown-toggle ps-2">K. Anderson</span>
+                        <span class="d-none d-md-block dropdown-toggle ps-2" id="UserShowId">K. Anderson</span>
                     </a>
                     <!-- End Profile Iamge Icon -->
 
@@ -288,239 +288,38 @@
     </header>
     <!-- End Header -->
 
-    <!-- ======= Sidebar ======= -->
-    <aside id="sidebar" class="sidebar">
-
+     <!-- ======= Sidebar ======= -->
+     <aside id="sidebar" class="sidebar">
         <ul class="sidebar-nav" id="sidebar-nav">
 
             <li class="nav-item">
-                <a class="nav-link " href="/JsonCRUD/Custom/ShasankNice/index.html">
+                <a id="DashboardId" class="nav-link " href="#">
                     <i class="bi bi-grid"></i>
                     <span>Dashboard</span>
                 </a>
             </li>
             <!-- End Dashboard Nav -->
 
+            <li class="nav-heading">Engineer Menu</li>
+
 
             <li class="nav-item">
-                <a class="nav-link collapsed" data-bs-target="#components-nav" data-bs-toggle="collapse" href="#">
-                    <i class="bi bi-menu-button-wide"></i><span>Import</span><i class="bi bi-chevron-down ms-auto"></i>
+                <a class="nav-link collapsed" data-bs-target="#iconss-nav" data-bs-toggle="collapse" href="#">
+                    <i class="bi bi-globe-americas"></i></i><span>Outer</span><i class="bi bi-chevron-down ms-auto"></i>
                 </a>
-                <ul id="components-nav" class="nav-content  collapse" data-bs-parent="#sidebar-nav">
+                <ul id="iconss-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
                     <li>
-                        <a href="/JsonCRUD/Custom/ShasankNice/Imports/Check/Check.html">
-                            <i class="bi bi-circle"></i><span>Check</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="/JsonCRUD/Custom/ShasankNice/Imports/Croma/Croma.html">
-                            <i class="bi bi-circle"></i><span>Croma</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="/JsonCRUD/Custom/ShasankNice/Imports/Panasonic/Panasonic.html">
-                            <i class="bi bi-circle"></i><span>Panasonic</span>
-                        </a>
-                    </li>
-
-                </ul>
-            </li>
-            <!-- End Import Nav -->
-
-            <li class="nav-item">
-                <a class="nav-link collapsed" data-bs-target="#components2-nav" data-bs-toggle="collapse" href="#">
-                    <i class="bi bi-menu-button-wide"></i><span>Users</span><i class="bi bi-chevron-down ms-auto"></i>
-                </a>
-                <ul id="components2-nav" class="nav-content  collapse" data-bs-parent="#sidebar-nav">
-                    <li>
-                        <a href="/JsonCRUD/Custom/ShasankNice/Users/CreateNew/CreateNew.html">
-                            <i class="bi bi-circle"></i><span>Create New</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="/JsonCRUD/Custom/ShasankNice/Users/Show/Show.html">
-                            <i class="bi bi-circle"></i><span>Show</span>
-                        </a>
-                    </li>
-
-                </ul>
-            </li>
-            <!-- End Users Nav -->
-
-            <li class="nav-item">
-                <a class="nav-link collapsed" data-bs-target="#forms-nav" data-bs-toggle="collapse" href="#">
-                    <i class="bi bi-journal-text"></i><span>Forms</span><i class="bi bi-chevron-down ms-auto"></i>
-                </a>
-                <ul id="forms-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
-                    <li>
-                        <a href="forms-elements.html">
-                            <i class="bi bi-circle"></i><span>Form Elements</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="forms-layouts.html">
-                            <i class="bi bi-circle"></i><span>Form Layouts</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="forms-editors.html">
-                            <i class="bi bi-circle"></i><span>Form Editors</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="forms-validation.html">
-                            <i class="bi bi-circle"></i><span>Form Validation</span>
-                        </a>
-                    </li>
-                </ul>
-            </li>
-            <!-- End Forms Nav -->
-
-            <li class="nav-item">
-                <a class="nav-link collapsed" data-bs-target="#tables-nav" data-bs-toggle="collapse" href="#">
-                    <i class="bi bi-layout-text-window-reverse"></i><span>Tables</span><i
-                        class="bi bi-chevron-down ms-auto"></i>
-                </a>
-                <ul id="tables-nav" class="nav-content  collapse" data-bs-parent="#sidebar-nav">
-                    <li>
-                        <a href="/JsonCRUD/Custom/ShasankNice/Tables/All/All.html">
-                            <i class="bi bi-circle"></i><span>All</span>
-                        </a>
-                    </li>
-
-                </ul>
-            </li>
-            <!-- End Tables Nav -->
-
-            <li class="nav-item">
-                <a class="nav-link collapsed" data-bs-target="#charts-nav" data-bs-toggle="collapse" href="#">
-                    <i class="bi bi-bar-chart"></i><span>Assign</span><i class="bi bi-chevron-down ms-auto"></i>
-                </a>
-                <ul id="charts-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
-                    <li>
-                        <a href="charts-chartjs.html">
-                            <i class="bi bi-circle"></i><span>Chart.js</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="charts-apexcharts.html">
-                            <i class="bi bi-circle"></i><span>ApexCharts</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="charts-echarts.html">
-                            <i class="bi bi-circle"></i><span>ECharts</span>
-                        </a>
-                    </li>
-                </ul>
-            </li>
-            <!-- End Charts Nav -->
-
-            <li class="nav-item">
-                <a class="nav-link collapsed" data-bs-target="#icons-nav" data-bs-toggle="collapse" href="#">
-                    <i class="bi bi-gem"></i><span>Technicians</span><i class="bi bi-chevron-down ms-auto"></i>
-                </a>
-                <ul id="icons-nav" class="nav-content  collapse" data-bs-parent="#sidebar-nav">
-                    <li>
-                        <a href="/JsonCRUD/Custom/ShasankNice/Technicians/CreateNew/CreateNew.html">
-                            <i class="bi bi-circle"></i><span>Create New</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="/JsonCRUD/Custom/ShasankNice/Technicians/Show/Show.html">
-                            <i class="bi bi-circle"></i><span>Show</span>
-                        </a>
-                    </li>
-
-                </ul>
-            </li>
-            <!-- End Technicians Nav -->
-
-
-            <li class="nav-heading">Engineer Admin</li>
-
-            <li class="nav-item">
-                <a class="nav-link collapsed" data-bs-target="#componentss-nav" data-bs-toggle="collapse" href="#">
-                    <i class="bi bi-menu-button-wide"></i><span>OutSide</span><i class="bi bi-chevron-down ms-auto"></i>
-                </a>
-                <ul id="componentss-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
-                    <li>
-                        <a href="/JsonCRUD/Custom/ShasankNice/EngineerAdmin/OutSide/All/All.html">
+                        <a id="MobileFromHtmlId" href="#">
                             <i class="bi bi-circle"></i><span>All</span>
                         </a>
                     </li>
 
 
                 </ul>
-            </li><!-- End Menu Nav -->
-
-            <li class="nav-heading">TechniciansWise</li>
-
-            <li class="nav-item">
-                <a class="nav-link " data-bs-target="#TechniciansWise-nav" data-bs-toggle="collapse" href="#">
-                    <i class="bi bi-globe-americas"></i></i><span>Tech-wise</span><i
-                        class="bi bi-chevron-down ms-auto"></i>
-                </a>
-                <ul id="TechniciansWise-nav" class="nav-content  " data-bs-parent="#sidebar-nav">
-                    <li>
-                        <a href="./TechniciansWise/All/All.html">
-                            <i class="bi bi-circle"></i><span>All</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="./TechniciansWise/Show/Show.html" class="active">
-                            <i class="bi bi-circle"></i><span>Show</span>
-                        </a>
-                    </li>
-
-
-                </ul>
 
             </li>
-            <!-- End TechniciansWise Nav -->
-
-            <li class="nav-heading">Jobs</li>
-
-            <li class="nav-item">
-                <a class="nav-link collapsed" data-bs-target="#componentsss-nav" data-bs-toggle="collapse" href="#">
-                    <i class="bi bi-menu-button-wide"></i><span>Menu</span><i class="bi bi-chevron-down ms-auto"></i>
-                </a>
-                <ul id="componentsss-nav" class="nav-content  collapse" data-bs-parent="#sidebar-nav">
-                    <li>
-                        <a href="/JsonCRUD/Custom/ShasankNice/Jobs/Menu/All/All.html">
-                            <i class="bi bi-circle"></i><span>All</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="/JsonCRUD/Custom/ShasankNice/Jobs/Menu/Pending/Pending.html">
-                            <i class="bi bi-circle"></i><span>Pending</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="/JsonCRUD/Custom/ShasankNice/Jobs/Menu/Complated/Complated.html">
-                            <i class="bi bi-circle"></i><span>Complated</span>
-                        </a>
-                    </li>
-
-                </ul>
-            </li><!-- End Menu Nav -->
-
-            <li class="nav-item">
-                <a class="nav-link collapsed" href="users-profile.html">
-                    <i class="bi bi-person"></i>
-                    <span>Profile</span>
-                </a>
-            </li>
-            <!-- End Profile Page Nav -->
-
-            <li class="nav-item">
-                <a class="nav-link collapsed" href="pages-faq.html">
-                    <i class="bi bi-question-circle"></i>
-                    <span>F.A.Q</span>
-                </a>
-            </li>
-            <!-- End F.A.Q Page Nav -->
-
+            <!-- End Outer Nav -->
+            
             <li class="nav-item">
                 <a class="nav-link collapsed" href="pages-contact.html">
                     <i class="bi bi-envelope"></i>
@@ -538,7 +337,7 @@
             <!-- End Register Page Nav -->
 
             <li class="nav-item">
-                <a class="nav-link collapsed" href="pages-login.html">
+                <a class="nav-link collapsed" href="../pages-login.html">
                     <i class="bi bi-box-arrow-in-right"></i>
                     <span>Login</span>
                 </a>
@@ -562,7 +361,6 @@
             <!-- End Blank Page Nav -->
 
         </ul>
-
     </aside>
     <!-- End Sidebar-->
 
@@ -585,7 +383,13 @@
                 <div class="col-lg-12">
                     <div class="card">
                         <div class="card-body">
-                            <h5 class="card-title">All Data</h5>
+                            <div class="row mb-3">
+                                <label class="col-sm-2 col-form-label">Engineer Name:</label>
+                                <div class="col-sm-10">
+                                    <label class="col-sm-2 col-form-label" id="TechNmaeId">Engineer Name</label>
+                                </div>
+                            </div>
+                            <!-- <h5 class="card-title" id="TechNmaeId">All Data</h5> -->
                             <div class="col-1">
                                 <button type="button" id="RefreshbuttonIn" class="btn btn-primary rounded-circle">
 
@@ -607,16 +411,10 @@
                                 data-id-field="pk">
                                 <thead>
                                     <tr>
+                                        <!-- <th data-field="id">ID</th> -->
                                         <th data-formatter="jFGlobalSerialColumn">#</th>
-                                        <th data-field="TechnicianName">Engineer</th>
-                                        <th data-field="Mobile">Mobile</th>
-                                        <th data-field="TotalStatus" data-footer-formatter="TotalStatusFormatter">
-                                            Assigned
-                                        </th>
-                                        <th data-field="TotalPendingStatus"
-                                            data-footer-formatter="TotalPendingStatusFormatter">Pending </th>
-                                        <th data-field="TotalComplateStatus"
-                                            data-footer-formatter="TotalComplateStatusFormatter">Complated </th>
+                                        <th data-field="JobId">JobId</th>
+                                        <th data-formatter="jFGlobalAssignButtonClick">Show</th>
 
                                     </tr>
                                 </thead>
@@ -667,18 +465,15 @@
             return index + 1;
         };
 
-        function TotalComplateStatusFormatter(data) {
-            return data.map(e => e.TotalComplateStatus).reduce((a, b) => a + b, 0);
+        function jFGlobalAssignButtonClick(value, row, index) {
+            return [
+                `<a class=" DeleteButtonClass" href="../Technician-inputs/Technician-inputs.html?id=${row.id}&Engineer=${row.Engineer}" data-UuId="${row.UuId}" title="Delete">`,
+                '<svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="currentColor" class="bi bi-arrow-right-square-fill" viewBox="0 0 16 16">',
+                '<path d="M0 14a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2a2 2 0 0 0-2 2zm4.5-6.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5a.5.5 0 0 1 0-1"/>',
+                '</svg>',
+                '</a>  '
+            ].join('')
         };
-
-        function TotalPendingStatusFormatter(data) {
-            return data.map(e => e.TotalPendingStatus).reduce((a, b) => a + b, 0);
-        };
-
-        function TotalStatusFormatter(data) {
-            return data.map(e => e.TotalStatus).reduce((a, b) => a + b, 0);
-        };
-
         function detailFormatter(index, row) {
             var html = []
             $.each(row, function (key, value) {
@@ -700,6 +495,7 @@
 
     <!-- Template Main JS File -->
     <script src="../../assets/js/main.js"></script>
+    <script type="module" src="./js/Nav/StartFunc.js"></script>
     <script type="module" src="./js/StartFunc.js"></script>
 
 
