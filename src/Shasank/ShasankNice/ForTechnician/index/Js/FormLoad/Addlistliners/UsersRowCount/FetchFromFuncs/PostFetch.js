@@ -6,11 +6,13 @@ let StartFunc = async () => {
     let LocaltableName = ConfigJson.tableName;
 
     // let jVarLocalFetchHeaders = StartFuncFetchHeaders();
-    let jVarLocalFetchUrl = `/${LocalroutePath}/${LocaltableName}/RowCount`;
+    let jVarLocalFetchUrl = `/${LocalroutePath}/${LocaltableName}`;
     let response = await fetch(jVarLocalFetchUrl);
     let data = await response.json();
 
-    return await data;
+    localStorage.setItem("TicketsData",JSON.stringify(data))
+
+    // return await data;
 };
 
 export { StartFunc };
