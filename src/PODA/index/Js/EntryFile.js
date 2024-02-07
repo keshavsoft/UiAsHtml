@@ -1,7 +1,7 @@
-import { StartFunc as StartFuncDropDown } from "./DropDown/EntryFile.js";
+import { StartFunc as StartFuncFormLoad } from "./FormLoad/EntryFile.js";
 
 const StartFunc = () => {
-    StartFuncDropDown();
+    StartFuncFormLoad();
 };
 
 StartFunc();
