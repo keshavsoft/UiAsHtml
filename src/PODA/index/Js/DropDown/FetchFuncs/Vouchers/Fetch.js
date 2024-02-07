@@ -1,12 +1,10 @@
-import ConfigJson from './Config.json' assert {type: 'json'};
+import { StartFunc as StartFuncAfterFetch } from "./AfterFetch.js"
 
 const StartFunc = async () => {
-
-    let ResponseData = await fetch(`/${ConfigJson.routePath}/${ConfigJson.tableName}`);
+    let ResponseData = await fetch("/bin/Voucher");
     let LocaResJsonData = await ResponseData.json();
-    console.log("LocaResJsonData:", LocaResJsonData);
-
-
+    
+    StartFuncAfterFetch({ inFetchData: LocaResJsonData });
 };
 
 export { StartFunc };
