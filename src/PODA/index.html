@@ -139,18 +139,19 @@
                     </div>
                     <div class="col-md-4">
                         <label for="disabledTextInput" class="form-label">CustomerName</label><br>
-                        <!-- <input type="text" id="disabledTextInput" class="form-control" placeholder="Enter Number"> -->
-                        <input type="text" id="disabledTextInput" placeholder="Enter CustomerName" list="CktPlayers">  
+                        <input type="text" id="disabledTextInput" class="form-control" placeholder="Enter CustomerName" list="CktPlayers">  
                         <datalist id="CktPlayers">  
-                        <option value="ADAMA INDIA PRIVATE LIMITED">  
-                        <option value="ADVANCE PESTICIDES">  
-                        <option value="AEGIS AGRO CHEMICALS INDIA PVT LTD">   
-                        <option value="AGRI LAND PURCHASE AT YADAVOLU">      
-                        <option value="BABU AND BABU AGRO SERVICE">   
-                        <option value="BAJAJ FINANCE LTD">   
-                        <option value="BANDARU VENKATAGANGADAR">  
+                            <option value="ADAMA INDIA PRIVATE LIMITED">  
+                            <option value="ADVANCE PESTICIDES">  
+                            <option value="AEGIS AGRO CHEMICALS INDIA PVT LTD">   
+                            <option value="AGRI LAND PURCHASE AT YADAVOLU">      
+                            <option value="BABU AND BABU AGRO SERVICE">   
+                            <option value="BAJAJ FINANCE LTD">   
+                            <option value="BANDARU VENKATAGANGADAR">  
                         </datalist>  
                     </div>
+                    
+
                     <div class="col-md-3">
                         <label for="disabledTextInput" class="form-label">AccountBalence</label>
                         <input type="text" id="disabledTextInput" class="form-control" placeholder="Enter AccountBalance">
@@ -227,33 +228,41 @@
                             class="close" data-dismiss="alert" aria-label="Close"><span
                                 aria-hidden="true">×</span></button><strong>Om!</strong>
                         Saved Successfully...!</div>
+                        <table id="InvTable" class="InvTableClass  KTableClass  table table-bordered table-striped"
+                  style="width: 100%; border: 0px solid #000; border-collapse: collapse;" data-grid="Grid1" data-savetype=""
+                  onkeydown="jVarGlobalSearchTable.jFkey(event)" data-klevel="undefined" data-kcolumnindex="undefined"
+                  data-krowindex="undefined" data-vsign="undefined">
+                  <thead>
+                    <tr style="">
+                      <th class="KCol-0" width="0.00%" data-editable="True" data-dataattribute="SNo">#</th>
+                      <th class="KCol-1" width="13.70%" data-editable="True" data-dataattribute="GridAccount">Grid Account
+                      </th>
+                      <th class="KCol-2" width="20.55%" data-editable="True" data-dataattribute="ProductName">Product Name
+                      </th>
+                      <th class="KCol-3" width="10.96%" data-editable="True" data-dataattribute="GodownBalance">Bal</th>
+                      <th class="KCol-4" width="13.70%" data-editable="True" data-dataattribute="Batch">Batch</th>
+                      <th class="KCol-5" style="text-align:right" width="13.70%" data-showtotal="Yes" data-editable="True"
+                        data-dataattribute="Qty">Qty</th>
+                      <th class="KCol-6" width="13.70%" data-editable="True" data-dataattribute="Rate">Rate</th>
+                      <th class="KCol-7" width="13.70%" data-showtotal="Yes" data-editable="True" data-dataattribute="Amount">
+                        Amount</th>
+                      <th class="KCol-8" width="0.00%" data-editable="True" data-dataattribute="Save">Save</th>
+                      <th class="KCol-9" style="display:none" width="0.00%" data-editable="True" data-dataattribute="PK">PK
+                      </th>
+                      <th class="tableRowOptions" style="display:none" width="0.00%" data-editable="false">Options</th>
+                      <th class="tableRowOptions" style="display:none" width="0.00%" data-editable="false">Go</th>
+                    </tr>
+                  </thead>
+                
+                </table>
                     
                 </div>
                 <div class="KContainerClass" id="Table2DivId">
                     <div id="Table2MsgDivId"></div>
                     
                 </div>
-                <div id="FooterDivID" class="row" style="">
-                    <div class="col-md"><button type="button" class="col-md-2 btn btn-outline-success"
-                            onclick="jFBreadcrumTranCreateNavigation({inJVarQueryName : &#39;GSTSALES&#39;,inJVarBreadcrumRemove:false})"
-                            data-ksource="undefined">CreateNew</button><button type="button"
-                            class="col-md-2 btn btn-outline-success"
-                            onclick="jVarGlobalMenu1IndexObject.jFTranIndexNewTab({inJVarQueryName:&#39;SaleVouchers&#39;,inJVarBreadcrum:false,inJVarKThis:this})"
-                            data-ksource="undefined">Index</button><button type="button"
-                            class="col-md-2 btn btn-outline-success"
-                            onclick="jVarGlobalTableRowOptionsFunctions.jFTableRowPopUpPrint(this)"
-                            data-ksource="undefined">Preview</button><button type="button"
-                            class="col-md-2 btn btn-outline-success"
-                            onclick="jVarGlobalTableRowOptionsFunctions.jFjVarLocalDataReturnForDoublePreview(this)"
-                            data-ksource="undefined">DoublePreview</button><button type="button"
-                            class="col-md-2 btn btn-outline-success" onclick="jFThermalPrint(this)"
-                            data-ksource="undefined">T-Print</button><button type="button"
-                            class="col-md-2 btn btn-outline-success" onclick="jFThermalDoublePrint(this)"
-                            data-ksource="undefined">T2-Print</button></div>
-                </div>
-            </div>
-            <div id="GrandTotal" class="alert alert-info" style="text-align:right">GrandTotal : 430.00</div>
-        </div>
+                
+            
     </main>
     <footer>
         <!-- place footer here -->
