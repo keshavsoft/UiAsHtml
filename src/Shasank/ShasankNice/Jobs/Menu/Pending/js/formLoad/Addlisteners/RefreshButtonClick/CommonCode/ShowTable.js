@@ -45,7 +45,7 @@ const JFLocalColumns = () => {
 
 const JFLocalUnAssingnData = ({ InTableData }) => {
 
-    let LocalUnAssingnData = InTableData.filter(element => element.Engineer !== null && element.InternalStatus !== "Complated");
+    let LocalUnAssingnData = InTableData.filter(element => element.Engineer !== null && element.InternalStatus !== "Completed");
     return LocalUnAssingnData;
 
 };

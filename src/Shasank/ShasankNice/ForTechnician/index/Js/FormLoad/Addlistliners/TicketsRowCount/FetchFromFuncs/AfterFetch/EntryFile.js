@@ -6,7 +6,7 @@ let StartFunc = () => {
 let LocalFuncForUsersRowCountId = ({ inData }) => {
     console.log(inData);
     let jVarLocalEngineer = getUrlQueryParams({ inGetKey: "Engineer" });
-    let jVarLocalTechniciansData = inData.filter(element => element.Engineer === jVarLocalEngineer && element.InternalStatus == "Complated")
+    let jVarLocalTechniciansData = inData.filter(element => element.Engineer === jVarLocalEngineer && element.InternalStatus == "Completed")
     let jVarLocalUsersRowCountId = document.getElementById('TicketsRowCountId');
 
     if (jVarLocalUsersRowCountId === null === false) {
