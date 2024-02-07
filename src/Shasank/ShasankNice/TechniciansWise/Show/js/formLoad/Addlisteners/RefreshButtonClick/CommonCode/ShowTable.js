@@ -46,7 +46,7 @@ const JFLocalUnAssingnData = ({ inTicketsData, inTechniciansData }) => {
 
         let JvarLocalTotalComplate = inTicketsData.filter(ele => {
             if (ele.Engineer == element.TechnicianName) {
-                if (ele.InternalStatus === "Complated") {
+                if (ele.InternalStatus !== "Allocated") {
                     return ele;
                 };
                
