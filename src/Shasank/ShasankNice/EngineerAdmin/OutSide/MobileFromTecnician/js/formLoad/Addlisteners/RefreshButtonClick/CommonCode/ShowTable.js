@@ -49,7 +49,7 @@ const JFLocalColumns = () => {
 const JFLocalUnAssingnData = ({ InTableData }) => {
     let jVarLocalEngineer = getUrlQueryParams({ inGetKey: "Engineer" });
 
-    let LocalUnAssingnData = InTableData.filter(element => element.Engineer !== null && element.Engineer == jVarLocalEngineer && element.InternalStatus !== "Complated");
+    let LocalUnAssingnData = InTableData.filter(element => element.Engineer !== null && element.Engineer == jVarLocalEngineer && element.InternalStatus !== "Completed");
     return LocalUnAssingnData;
 
 };

@@ -503,28 +503,19 @@
                                 data-detail-view="true" data-detail-formatter="detailFormatter" data-id-field="pk">
                                 <thead>
                                     <tr>
-                                        <!-- <th data-field="id">ID</th> -->
                                         <th data-formatter="jFGlobalSerialColumn">#</th>
                                         <th data-field="JobId">JobId</th>
-                                        <!-- <th data-field="Status">Status</th> -->
-                                        <!-- <th data-field="CustomerName">CustomerName</th> -->
-                                        <!-- <th data-field="Address">Address</th>
+                                        <th data-field="Engineer" data-filter-control="select">Tecnician Name</th>
+                                        <th data-field="CreationDate" data-filter-control="select">CreationDate</th>
+                                        <th data-field="Address" data-visible="false">Address</th>
                                         <th data-field="MobileNo">Mobile No</th>
-                                        <th data-field="ContactNo">Contact No</th>
-                                        <th data-field="ModelName">ModelName</th>
-                                        <th data-field="JobClassification">Job Classification</th>
-                                        <th data-field="ProductGroupName">ProductGroupName</th>
-                                        <th data-field="WarrantyType">Warranty Type</th>
-                                        <th data-field="JobType">Job Type</th>
-                                        <th data-field="AgentRemarks">Agent Remarks</th>
-                                        <th data-field="DistanceType">Distance Type</th>
-                                        <th data-field="DealerName">Dealer Name</th>
-                                        <th data-field="CallFromNo">CallFromNo </th>
+                                        <th data-field="ContactNo" data-visible="false">Contact No</th>
+                                        <th data-field="ModelName" data-visible="false">ModelName</th>
+                                        <th data-field="JobClassification" data-visible="false">Job Classification</th>
+                                        <th data-field="ProductGroupName" data-visible="false">ProductGroupName</th>
+                                        <th data-field="EngineerRemarks" data-visible="false">Engineer Remarks</th>
                                         <th data-field="Brand">Brand </th>
-                                        <th data-field="InternalStatus">InternalStatus </th> -->
-                                        <!-- <th data-field="Engineer" data-filter-control="select">Engineer </th> -->
-                                        <th data-field="InternalStatus">InternalStatus </th>
-                                        <!-- <th data-formatter="jFGlobalAssignButtonClick">Show</th> -->
+                                        <th data-field="CompetedRemarks">Competed Remarks</th>
 
                                     </tr>
                                 </thead>
@@ -560,14 +551,14 @@
     <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
 
     <!-- Vendor JS Files -->
-    <script src="../../assets/vendor/apexcharts/apexcharts.min.js"></script>
-    <script src="../../assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-    <script src="../../assets/vendor/chart.js/chart.umd.js"></script>
-    <script src="../../assets/vendor/echarts/echarts.min.js"></script>
-    <script src="../../assets/vendor/quill/quill.min.js"></script>
-    <script src="../../assets/vendor/simple-datatables/simple-datatables.js"></script>
-    <script src="../../assets/vendor/tinymce/tinymce.min.js"></script>
-    <script src="../../assets/vendor/php-email-form/validate.js"></script>
+    <script src="../../../assets/vendor/apexcharts/apexcharts.min.js"></script>
+    <script src="../../../assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="../../../assets/vendor/chart.js/chart.umd.js"></script>
+    <script src="../../../assets/vendor/echarts/echarts.min.js"></script>
+    <script src="../../../assets/vendor/quill/quill.min.js"></script>
+    <script src="../../../assets/vendor/simple-datatables/simple-datatables.js"></script>
+    <script src="../../../assets/vendor/tinymce/tinymce.min.js"></script>
+    <script src="../../../assets/vendor/php-email-form/validate.js"></script>
 
     <script>
         function jFGlobalSerialColumn(value, row, index) {
