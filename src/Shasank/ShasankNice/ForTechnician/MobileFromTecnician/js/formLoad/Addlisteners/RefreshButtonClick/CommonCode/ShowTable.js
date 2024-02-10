@@ -13,6 +13,12 @@ const StartFunc = () => {
         });
     };
 
+    let jVarLocalUsersNotificationId = document.getElementById('NotificationId');
+    if (jVarLocalUsersNotificationId === null === false) {
+        jVarLocalUsersNotificationId.innerHTML = JVarLocalFilterUnAssinData.length
+    };
+
+
     $table.bootstrapTable('destroy');
 
     $table.bootstrapTable({
