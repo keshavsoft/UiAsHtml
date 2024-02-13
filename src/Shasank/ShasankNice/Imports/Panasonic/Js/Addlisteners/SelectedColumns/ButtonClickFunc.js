@@ -16,7 +16,7 @@ let StartFunc = async () => {
                 const jsonArray = convertCsvToJsonFunction(csvData);
                 let response = await StartFuncFetchFunc({ inBodyData: jsonArray });
                 console.log("response : ", response, response.status);
-                // StartFuncAfterFetch({ inFromFetch: response });
+                StartFuncAfterFetch({ inFromFetch: response });
             };
 
             reader.readAsText(file);
