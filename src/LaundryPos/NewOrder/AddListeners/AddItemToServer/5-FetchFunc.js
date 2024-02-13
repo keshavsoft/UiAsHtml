@@ -4,7 +4,7 @@ let StartFunc = async ({ inBodyData }) => {
     let jVarLocalBodyData = inBodyData;
 
     // let jVarLocalFetchUrl = `/${ApiConfigJson.ProjectName}/Api/Data/FromFolder/FromFile/Items/FromDataFolder/WithScreens/MainAndSub/SaveRow/AsIsWithTimeStamp`;
-    let jVarLocalFetchUrl = `/binWithFolder/Transactions/Orders`;
+    let jVarLocalFetchUrl = `/bin/Transactions/Orders`;
 
     let jVarLocalFetchHeaderObject = {
         method: "post",
