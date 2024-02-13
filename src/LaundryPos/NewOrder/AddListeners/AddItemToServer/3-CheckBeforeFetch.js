@@ -57,13 +57,13 @@ let jFLocalForRate = ({ inClosestTabPane }) => {
 let jFLocalForItem = ({ inClosestTabPane }) => {
     let jVarLocalPcsClass = inClosestTabPane.querySelector(".ItemSelect");
     let jVarLocalHtmlValue = jVarLocalPcsClass.value;
-    console.log("jVarLocalHtmlValue::",parseInt(jVarLocalHtmlValue));
 
-    if (parseInt(jVarLocalHtmlValue) > 0 === false) {
+    if (jVarLocalHtmlValue.length > 0 === false) {
         jVarLocalPcsClass.classList.add("is-invalid");
         jVarLocalPcsClass.focus();
-        // return false;
+        return false;
     } else {
+
         jVarLocalPcsClass.classList.remove("is-invalid");
         jVarLocalPcsClass.classList.add("is-valid");
     };

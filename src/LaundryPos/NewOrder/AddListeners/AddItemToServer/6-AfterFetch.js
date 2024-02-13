@@ -1,7 +1,7 @@
 // import ApiConfigJson from "./../../../ApiConfig.json" assert {type: 'json'};
 
 let StartFunc = ({ inFromFetch, inBodyData }) => {
-    if (inFromFetch.KTF === true) {
+    if (inFromFetch.length > 0) {
         let jVarLocalOrderNumber = inFromFetch.NewPk;
         jFLocalToURL({ inOrderNumber: jVarLocalOrderNumber, inBodyData });
     } else {
@@ -12,7 +12,7 @@ let StartFunc = ({ inFromFetch, inBodyData }) => {
         })
     };
 };
-let jFLocalToURL = ({ inOrderNumber,inBodyData }) => {
+let jFLocalToURL = ({ inOrderNumber, inBodyData }) => {
     const myUrlWithParams = new URL(`${window.location.origin}${window.location.pathname}`);
     const k1 = new URL("../OrderWithoutCheckout/OrderWithoutCheckout.html", myUrlWithParams.href);
     k1.searchParams.append("BranchName", inBodyData.inFileNameOnly);
