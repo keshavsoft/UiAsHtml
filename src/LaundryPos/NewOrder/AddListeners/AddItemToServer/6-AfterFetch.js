@@ -1,4 +1,4 @@
-import ApiConfigJson from "./../../../ApiConfig.json" assert {type: 'json'};
+// import ApiConfigJson from "./../../../ApiConfig.json" assert {type: 'json'};
 
 let StartFunc = ({ inFromFetch, inBodyData }) => {
     if (inFromFetch.KTF === true) {

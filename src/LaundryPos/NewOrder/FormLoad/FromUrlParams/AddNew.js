@@ -1,5 +1,5 @@
-import { StartFunc as StartFuncToLocalStorage } from "../../../../ToLocalStorage/ItemsInOrder/Bulk.js";
-import { StartFunc as StartFuncToLocalStorageAddOnData } from "../../../../ToLocalStorage/AddOnData/Bulk.js";
+import { StartFunc as StartFuncToLocalStorage } from "../../../ToLocalStorage/ItemsInOrder/Bulk.js";
+import { StartFunc as StartFuncToLocalStorageAddOnData } from "../../../ToLocalStorage/AddOnData/Bulk.js";
 
 let StartFunc = () => {
     StartFuncToLocalStorage({ inData: {} });

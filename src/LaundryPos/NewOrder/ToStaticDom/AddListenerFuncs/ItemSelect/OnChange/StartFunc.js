@@ -24,12 +24,17 @@ let jFLocalItemSelectChange = ({ inEvent }) => {
         let jVarLocalStorageKey = "Items";
         let jVarLocalEvent = event;
         let jVarLocalCurrentTarget = jVarLocalEvent.currentTarget;
+        console.log("jVarLocalCurrentTargetLL",jVarLocalCurrentTarget);
+        console.log("value",jVarLocalCurrentTarget.value);
         let jVarLocalClosestTab = jVarLocalCurrentTarget.closest(".tab-pane");
         let jVarLocalRate = jVarLocalClosestTab.querySelector(".RateClass");
+        console.log("jVarLocalRatejVarLocalRate::",jVarLocalRate);
 
         let jVarLocalItemPk = parseInt(jVarLocalCurrentTarget.value);
+        console.log("jVarLocalItemPk::",jVarLocalItemPk);
 
         let jVarLocalItems = StartFuncFromLocalStorage({ inLocalStorageKey: jVarLocalStorageKey });
+        console.log("jVarLocalItems::",Object.values(jVarLocalItems));
 
         let jVarLocalFind = Object.values(jVarLocalItems).find(element => element.pk === jVarLocalItemPk);
 
