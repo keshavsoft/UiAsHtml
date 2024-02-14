@@ -2,7 +2,7 @@
 
 let StartFunc = ({ inFromFetch, inBodyData }) => {
     if (inFromFetch.length > 0) {
-        let jVarLocalOrderNumber = inFromFetch.NewPk;
+        let jVarLocalOrderNumber = inFromFetch;
         jFLocalToURL({ inOrderNumber: jVarLocalOrderNumber, inBodyData });
     } else {
         Swal.fire({
@@ -13,12 +13,17 @@ let StartFunc = ({ inFromFetch, inBodyData }) => {
     };
 };
 let jFLocalToURL = ({ inOrderNumber, inBodyData }) => {
-    const myUrlWithParams = new URL(`${window.location.origin}${window.location.pathname}`);
-    const k1 = new URL("../OrderWithoutCheckout/OrderWithoutCheckout.html", myUrlWithParams.href);
-    k1.searchParams.append("BranchName", inBodyData.inFileNameOnly);
-    k1.searchParams.append("OrderNumber", inOrderNumber);
+    const url = new URL(window.location.href);
+    const params1 = new URLSearchParams(url.search);
+    let NewURl = new URL("../OrderWithoutCheckout/OrderWithoutCheckout.html", url);
+    params1.append("OrderNumber", inOrderNumber);
 
-    window.location.href = k1.href;
+    const new_url = new URL(`${NewURl.href}?${params1}`);
+    window.location.href = new_url.href;
 };
+
+
+
+
 
 export { StartFunc };

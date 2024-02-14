@@ -1,11 +1,7 @@
 import CommonKeys from "../../ToLocalStorage/Keys.json" assert { type: "json" };
-// import CommonConfigJson from "../../Config.json" assert { type: "json" };
-
-// import CommonConfigJson from "../../../../Config.json" assert { type: "json" };
 
 
 const StartFunc = ({ inBranchName }) => {
-    // let jVarLocalBranchName = CommonConfigJson.BranchName;
 
     let jVarLocalBranchName = inBranchName;
 
@@ -19,9 +15,9 @@ const StartFunc = ({ inBranchName }) => {
         jVarLocalDataNeeded = jVarLocalCustomerDataAsJson;
     };
 
-    if (jVarLocalBranchName in jVarLocalDataNeeded) {
-        return jVarLocalDataNeeded[jVarLocalBranchName];
-    };
+    // if (jVarLocalBranchName in jVarLocalDataNeeded.OrderData) {
+    //     return jVarLocalDataNeeded[jVarLocalBranchName];
+    // };
 
     return jVarLocalDataNeeded;
 };
