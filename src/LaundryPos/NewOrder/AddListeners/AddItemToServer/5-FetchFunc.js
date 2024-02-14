@@ -1,10 +1,8 @@
-// import ApiConfigJson from "./../../../../../../ApiConfig.json" assert {type: 'json'};
-
 let StartFunc = async ({ inBodyData }) => {
     let jVarLocalBodyData = inBodyData;
+    let jVarLocalBranchName = getUrlQueryParams({ inGetKey: "BranchName" });
 
-    // let jVarLocalFetchUrl = `/${ApiConfigJson.ProjectName}/Api/Data/FromFolder/FromFile/Items/FromDataFolder/WithScreens/MainAndSub/SaveRow/AsIsWithTimeStamp`;
-    let jVarLocalFetchUrl = `/bin/Transactions/Orders`;
+    let jVarLocalFetchUrl = `/bin/Transactions/${jVarLocalBranchName}`;
 
     let jVarLocalFetchHeaderObject = {
         method: "post",
@@ -21,4 +19,10 @@ let StartFunc = async ({ inBodyData }) => {
     return jVarLocalResponse;
 };
 
+let getUrlQueryParams = ({ inGetKey }) => {
+    const queryString = window.location.search;
+    const parameters = new URLSearchParams(queryString);
+    const value = parameters.get(inGetKey);
+    return value;
+};
 export { StartFunc };
