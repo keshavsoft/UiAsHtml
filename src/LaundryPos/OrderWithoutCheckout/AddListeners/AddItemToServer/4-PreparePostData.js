@@ -4,17 +4,8 @@ const StartFunc = () => {
     let jVarLocalOrderNumber=jFLocalFromDomOrderNumberId();
     let jVarLocalBranchName = getUrlQueryParams({ inGetKey: "BranchName" })
 
-    let jVarLocalToLocalStorage = {};
 
-    // jVarLocalToLocalStorage.FolderName = "Transactions";
-    // jVarLocalToLocalStorage.FileNameOnly = jVarLocalBranchName;
-    // jVarLocalToLocalStorage.ItemName = "Orders";
-    // jVarLocalToLocalStorage.ScreenName = "Create";
-    // jVarLocalToLocalStorage.JsonPk = jVarLocalOrderNumber;
-    
-    jVarLocalToLocalStorage.SubTableKey = "ItemsInOrder";
-    jVarLocalToLocalStorage.DataToInsert = jFLocalPrepareObject();
-    // jVarLocalToLocalStorage.inPostData.ItemsInOrder["1"] = jFLocalPrepareObject();
+   let jVarLocalToLocalStorage = jFLocalPrepareObject();
 
     return jVarLocalToLocalStorage;
 };

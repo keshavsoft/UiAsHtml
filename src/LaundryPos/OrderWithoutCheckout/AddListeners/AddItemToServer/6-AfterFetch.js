@@ -1,5 +1,5 @@
 let StartFunc = ({ inFromFetch }) => {
-    if (inFromFetch.KTF) {
+    if (inFromFetch) {
         Swal.fire({
             title: 'New Item Added',
             confirmButtonText: 'Ok',
