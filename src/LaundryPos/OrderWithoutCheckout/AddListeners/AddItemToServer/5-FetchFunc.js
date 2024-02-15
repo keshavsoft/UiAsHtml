@@ -1,14 +1,13 @@
-// import ApiConfigJson from "./../../../../../../ApiConfig.json" assert {type: 'json'};
-
 let StartFunc = async ({ inBodyData }) => {
     let jVarLocalBodyData = inBodyData;
+    let jVarLocalOrderNumber = getUrlQueryParams({ inGetKey: "OrderNumber" });
+    let jVarLocalBranchName = getUrlQueryParams({ inGetKey: "BranchName" });
 
-    let jVarLocalFetchUrl = `/${ApiConfigJson.ProjectName}/Api/Data/FromFolder/FromFile/Items/FromDataFolder/SubTable/WithChecking/Insert`;
-    // POST http://localhost:4119/JSONApi/Api/Data/FromFolder/FromFile/Items/FromDataFolder/WithScreens/SubTable/WithChecking/Insert
 
+    let jVarLocalFetchUrl = `/bin/Transactions/${jVarLocalBranchName}/InsertToKey/${jVarLocalOrderNumber}/ItemsInOrder`;
 
     let jVarLocalFetchHeaderObject = {
-        method: "post",
+        method: "PUT",
         headers: {
             'Accept': 'application/json',
             'Content-Type': 'application/json'
@@ -21,5 +20,12 @@ let StartFunc = async ({ inBodyData }) => {
 
     return jVarLocalResponse;
 };
+let getUrlQueryParams = ({ inGetKey }) => {
+    const queryString = window.location.search;
+    const parameters = new URLSearchParams(queryString);
+    const value = parameters.get(inGetKey);
+    return value;
+};
+
 
 export { StartFunc };

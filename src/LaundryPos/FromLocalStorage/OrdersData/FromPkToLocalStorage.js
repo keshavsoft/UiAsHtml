@@ -4,12 +4,12 @@ import { StartFunc as StartFuncToLocalStorageAddOnData } from "../../ToLocalStor
 
 const StartFunc = ({ inPk, inBranchName }) => {
     let jVarLocalDataNeeded = StartFuncBulk({ inBranchName });
-    
-    if (inPk in jVarLocalDataNeeded) {
-        StartFuncToLocalStorageAddOnData({ inData: jVarLocalDataNeeded[inPk].AddOnData });
-        StartFuncToLocalStorage({ inData: jVarLocalDataNeeded[inPk].ItemsInOrder });
 
-        return jVarLocalDataNeeded[inPk];
+    if (inPk == jVarLocalDataNeeded.UuId) {
+        StartFuncToLocalStorageAddOnData({ inData: jVarLocalDataNeeded.AddOnData });
+        StartFuncToLocalStorage({ inData: jVarLocalDataNeeded.ItemsInOrder });
+
+        return jVarLocalDataNeeded;
     };
 };
 

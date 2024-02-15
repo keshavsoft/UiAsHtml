@@ -1,6 +1,3 @@
-// import PrepareKeysJson from "./PrepareKeys.json" assert {type: 'json'};
-// import ApiConfigJson from "../../../../../../ApiConfig.json" assert {type: 'json'};
-
 const StartFunc = ({ inItemSerial }) => {
     let jVarLocalOrderNumber = jFLocalFromDomOrderNumberId();
     let jVarLocalBranchName = getUrlQueryParams({ inGetKey: "BranchName" })
@@ -33,54 +30,6 @@ let jFLocalFromDomOrderNumberId = () => {
     let jVarHtmlOrderNumberId = document.getElementById(jVarLocalHtmlOrderNumberId);
     let jVarHtmlOrderNumberIdValue = jVarHtmlOrderNumberId.innerHTML.trim();
     return jVarHtmlOrderNumberIdValue;
-};
-
-let jFLocalPrepareObject = () => {
-    try {
-        let jVarClosestTabPane = document.getElementById("MenItemsTabId");
-
-        // let jVarClosestTabPane = inTabPane;
-
-        // let jVarLocalItemSelect = jVarClosestTabPane.querySelector(".ItemSelect");
-        let jVarLocalWashType = jVarClosestTabPane.querySelector(".WashTypeClass");
-        let jVarLocalPcs = jVarClosestTabPane.querySelector(".PcsClass");
-        let jVarLocalRate = jVarClosestTabPane.querySelector(".RateClass");
-        let jVarLocalDisPer = jVarClosestTabPane.querySelector(".DisPerClass");
-
-        let jVarLocalCategory = jVarClosestTabPane.dataset.category;
-        let jVarLocalItemSelect = jFLocalItemSelect({ inTabPane: jVarClosestTabPane });
-
-        let localItemSelect = selectItemByValue({ inHtmlSelect: jVarLocalItemSelect.ItemSerialID });
-        let localWashSelect = selectItemByValue({ inHtmlSelect: jVarLocalWashType });
-        let localPcs = jFLocalFromDomAsInt({ inHtmlId: jVarLocalPcs });
-        let localRate = jFLocalFromDomAsInt({ inHtmlId: jVarLocalRate });
-        let localDisPer = jFLocalFromDomAsInt({ inHtmlId: jVarLocalDisPer });
-        let jVarlocalItemSerial = jFLocalItemSerialClass({ inTabPane: jVarClosestTabPane });
-        let jVarlocalLocation = jFLocalFactoriesSelect({ inTabPane: jVarClosestTabPane });
-        let localLocationSelect = selectItemByValue({ inHtmlSelect: jVarlocalLocation.locationID });
-        let jVarLocalDeliveryDateTime = jFLocalDeliveryDateTimeClass({ inTabPane: jVarClosestTabPane });
-
-        let localReturnObject = {
-            ItemSerial: jVarlocalItemSerial.ItemSerial,
-            Category: jVarLocalCategory,
-            ItemName: localItemSelect,
-            ItemNamePk: jVarLocalItemSelect.ItemSerial,
-            WashType: localWashSelect,
-            WashTypePk: jVarLocalItemSelect.ItemSerial,
-            locationPk: jVarlocalLocation.location,
-            location: localLocationSelect,
-            ...localPcs,
-            ...localRate,
-            ...localDisPer,
-            AddOn: "0-0",
-            DeliveryDateTime: jVarLocalDeliveryDateTime.DeliveryDateTime,
-            Total: Object.values(localPcs)[0] * Object.values(localRate)[0]
-        };
-
-        return localReturnObject;
-    } catch (error) {
-        console.log("error : ", error);
-    };
 };
 
 let jFLocalItemSerialClass = ({ inTabPane }) => {
