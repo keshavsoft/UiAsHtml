@@ -5,7 +5,8 @@ let StartFunc = async ({ inFromfetch }) => {
     let data = await LocalFromfetch.json();
     console.log(data);
   }
-  window.location.href = "/JsonCRUD/Custom/ShasankNice/Technicians/Show/Show.html";
+  window.location.href = "../Show/Show.html";
+  // window.location.href = "/JsonCRUD/Custom/ShasankNice/Technicians/Show/Show.html";
   // window.location.href = "";
 };
 
