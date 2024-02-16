@@ -11,14 +11,7 @@ const StartFunc = () => {
         e.preventDefault(); // Prevent HTML refresh
 
         StartFuncButtonClickFunc();
-
-        // const formData = new FormData(form); // Converts to array of arrays
-        // const obj = Object.fromEntries(formData); // Array of arrays to object
-        // console.log("aaaaaaaa : ", obj);
     });
-
-
-    // StartFuncAddlisteners();
 };
 
 StartFunc();
