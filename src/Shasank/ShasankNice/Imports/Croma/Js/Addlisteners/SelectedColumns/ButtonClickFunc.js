@@ -20,7 +20,7 @@ let StartFunc = async () => {
                 if (jsonArray.KTF) {
                     let response = await StartFuncFetchFunc({ inBodyData: result });
 
-                    StartFuncAfterFetch({ inFromFetch: response });
+                    await StartFuncAfterFetch({ inFromFetch: response });
                 };
             };
 
