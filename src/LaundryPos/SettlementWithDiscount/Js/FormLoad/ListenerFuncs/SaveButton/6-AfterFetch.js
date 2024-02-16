@@ -1,4 +1,5 @@
 let StartFunc = ({ inFromFetch }) => {
+    console.log("inFromFetch:",inFromFetch);
     if (inFromFetch) {
         Swal.fire({
             title: 'Settlement Success',
@@ -14,11 +15,12 @@ let StartFunc = ({ inFromFetch }) => {
 
 let jFLocalToURL = ({ inOrderNumber }) => {
     let jVarLocalBranchName = getUrlQueryParams({ inGetKey: "BranchName" });
+    let jVarLocalOrderNumber = getUrlQueryParams({ inGetKey: "OrderNumber" });
 
     const myUrlWithParams = new URL(`${window.location.origin}${window.location.pathname}`);
     const k1 = new URL("../Orders/QrCodesTable/QrCodesTable.html", myUrlWithParams.href);
     k1.searchParams.append("BranchName", jVarLocalBranchName);
-    k1.searchParams.append("OrderNumber", inOrderNumber);
+    // k1.searchParams.append("OrderNumber", jVarLocalOrderNumber);
 
     window.location.href = k1.href;
 };
