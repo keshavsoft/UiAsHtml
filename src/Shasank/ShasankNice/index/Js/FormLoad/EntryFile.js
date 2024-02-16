@@ -1,11 +1,11 @@
-import { StartFunc as StartFuncAddlistliners } from "./Addlistliners/EntryFile.js";
+import { StartFunc as StartFuncAddlisteners } from "./Addlistliners/EntryFile.js";
 
 const StartFunc = () => {
+    StartFuncAddlisteners();
+
     jFCheckBackend().then();
-    StartFuncAddlistliners();
+
     jFLocalStartFunc();
-    
-    
 };
 
 let jFLocalStartFunc = () => {
@@ -25,10 +25,18 @@ let jFLocalStartFunc = () => {
 };
 
 let jFCheckBackend = async () => {
-    let response = await fetch('');
-    let data = await response.json();
+    let jVarLocalFetchUrl = `AboutUs`;
+    //  window.location.origin;
 
-    return await data;
+    let response = await fetch(jVarLocalFetchUrl);
+
+    if (response.status === 404) {
+        Swal.fire({
+            title: "Check once!",
+            text: "Backend is not available...",
+            icon: "error"
+        });
+    };
 };
 
 export { StartFunc };
