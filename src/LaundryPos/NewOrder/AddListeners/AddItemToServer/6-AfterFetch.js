@@ -1,7 +1,9 @@
 // import ApiConfigJson from "./../../../ApiConfig.json" assert {type: 'json'};
 
 let StartFunc = ({ inFromFetch, inBodyData }) => {
-    if (inFromFetch.length > 0) {
+    console.log("inFromFetch:",inFromFetch);
+    console.log("length:",inFromFetch.length);
+    if (inFromFetch > 0) {
         let jVarLocalOrderNumber = inFromFetch;
         jFLocalToURL({ inOrderNumber: jVarLocalOrderNumber, inBodyData });
     } else {
