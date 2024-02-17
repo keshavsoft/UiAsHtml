@@ -19,7 +19,7 @@ let jFLocalOrderNumberId = () => {
     let jFLocalOrderNumber = getUrlQueryParams({ inGetKey: "OrderNumber" });
     let jVarLocalHtmlId = 'OrderNumberId';
     let jVarLocalOrderNumberId = document.getElementById(jVarLocalHtmlId);
-    jVarLocalOrderNumberId.innerHTML = "1";
+    jVarLocalOrderNumberId.innerHTML = jFLocalOrderNumber;
 };
 
 let getUrlQueryParams = ({ inGetKey }) => {
