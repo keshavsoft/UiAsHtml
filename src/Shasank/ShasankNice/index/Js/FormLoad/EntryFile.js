@@ -25,12 +25,15 @@ let jFLocalStartFunc = () => {
 };
 
 let jFCheckBackend = async () => {
-    let jVarLocalFetchUrl = `AboutUs`;
+    let jVarLocalFetchUrl = "/AboutUs";
     //  window.location.origin;
 
     let response = await fetch(jVarLocalFetchUrl);
 
     if (response.status === 404) {
+        let jVarLocalBrandNameId = document.getElementById('BrandNameId');
+        jVarLocalBrandNameId.style.color = "red";
+
         Swal.fire({
             title: "Check once!",
             text: "Backend is not available...",
