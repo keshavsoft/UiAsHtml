@@ -4,8 +4,18 @@ let StartFunc = async ({ inFromFetch }) => {
     if (LocalFromfetch.status === 500) {
         let data = await LocalFromfetch.json();
         console.log("data : ", data);
+        Swal.fire({
+            title: "500 Internal Server Error",
+            text: data.ErrorFrom,
+            icon: "error"
+          });
     };
-
+    
+    if (LocalFromfetch.status === 405) {
+        let data = await LocalFromfetch.text();
+        console.log("data : ", data);
+        Swal.fire("SweetAlert2 is working!");
+    };
     // console.log("aaaaaaaaaaa : ", inFromFetch);
     // let timerInterval;
     // Swal.fire({
