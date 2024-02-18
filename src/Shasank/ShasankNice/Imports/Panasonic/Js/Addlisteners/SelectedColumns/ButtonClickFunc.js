@@ -14,8 +14,11 @@ let StartFunc = async () => {
             reader.onload = async function (e) {
                 const csvData = e.target.result;
                 const jsonArray = convertCsvToJsonFunction(csvData);
+
+                // const result = jsonArray.CSVArrayData.filter(word => word.Status === "Assign");
+
                 let response = await StartFuncFetchFunc({ inBodyData: jsonArray });
-                console.log("response : ", response, response.status);
+
                 StartFuncAfterFetch({ inFromFetch: response });
             };
 
