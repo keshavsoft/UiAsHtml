@@ -15,7 +15,9 @@
 
     <!-- Google Fonts -->
     <link href="https://fonts.gstatic.com" rel="preconnect">
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Nunito:300,300i,400,400i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Nunito:300,300i,400,400i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
+        rel="stylesheet">
 
     <!-- Vendor CSS Files -->
     <link href="../../assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -345,7 +347,8 @@
 
             <li class="nav-item">
                 <a class="nav-link collapsed" data-bs-target="#tables-nav" data-bs-toggle="collapse" href="#">
-                    <i class="bi bi-layout-text-window-reverse"></i><span>Tables</span><i class="bi bi-chevron-down ms-auto"></i>
+                    <i class="bi bi-layout-text-window-reverse"></i><span>Tables</span><i
+                        class="bi bi-chevron-down ms-auto"></i>
                 </a>
                 <ul id="tables-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
                     <li>
@@ -500,12 +503,12 @@
     <main id="main" class="main">
 
         <div class="pagetitle">
-            <h1>Panasonic Elements</h1>
+            <h1>Panasonic CSV Import</h1>
             <nav>
                 <ol class="breadcrumb">
                     <li class="breadcrumb-item"><a href="index.html">Home</a></li>
-                    <li class="breadcrumb-item">Forms</li>
-                    <li class="breadcrumb-item active">Elements</li>
+                    <li class="breadcrumb-item">Import</li>
+                    <li class="breadcrumb-item active">Panasonic</li>
                 </ol>
             </nav>
         </div>
@@ -513,61 +516,31 @@
 
         <section class="section">
             <div class="row">
-                <div class="col-lg-">
-
-                    <div class="card">
-                        <div class="card-header ">
-                            <h1>Panasonic CSV Import</h1>
-                            <form class="row">
-                                <div class="col">
-                                    <label for="staticEmail2" class="visually-hidden">Choose CSV file Only</label>
-                                    <input class="form-control" type="file" id="csvFileInput" accept=".csv">
-                                </div>
-                                <div class="col">
-                                    <button type="button" id="SelectedColumnsId" class="btn btn-primary mb-3">Send</button>
-                                </div>
-                                <button class="btn btn-outline-primary btn-sm export mb-0 mt-sm-0 mt-1" id="ModalButtonId" type="button" name="button">Help</button>
-                            </form>
-                        </div>
-                        <div class="card-body">
-                            <!-- Bordered Table -->
-                            <div class="modal" id="ModelId" tabindex="-1">
-                                <div class="modal-dialog">
-                                    <div class="modal-content">
-                                        <div class="modal-header">
-                                            <h5 class="modal-title">Important Keys</h5>
-                                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                                        </div>
-                                        <div class="modal-body">
-                                            <div class="h2">1.Need Job no</div>
-                                            <div class="h2">2.Need CreationDate</div>
-                                            <div class="h2">3.Need CustomerName</div>
-                                            <div class="h2">4.Need Address</div>
-                                            <div class="h2">5.Need MobileNo</div>
-                                            <div class="h2">6.Need ContactNo</div>
-                                            <div class="h2">7.Need ModelName</div>
-                                            <div class="h2">8.Need JobClassification</div>
-                                            <div class="h2">9.Need ProductGroupName</div>
-                                            <div class="h2">10.Need WarrantyType</div>
-                                            <div class="h2">11.Need AgentRemarks</div>
-                                            <div class="h2">12.Need CallFromNo</div>
-                                            <div class="h2">13.Need Brand</div>
-
-                                        </div>
-                                        <div class="modal-footer">
-                                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- End Bordered Table -->
-
-                        </div>
-                    </div>
-
+                <div class="col">
+                    <label for="staticEmail2" class="visually-hidden">Choose CSV file Only</label>
+                    <input class="form-control" type="file" id="csvFileInput" accept=".csv">
                 </div>
+                <div class="col">
+                    <button type="button" id="SelectedColumnsId" class="btn btn-primary mb-3">Send</button>
+                </div>
+            </div>
 
-
+            <div class="row">
+                <div class="col">
+                    <button type="button" class="btn btn-warning" data-bs-toggle="modal" data-bs-target="#ModelId">
+                        Info
+                    </button>
+                </div>
+                <div class="col">
+                    <button type="button" class="btn btn-warning" data-bs-toggle="modal" data-bs-target="#ModelId">
+                        Info
+                    </button>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <p>How to identify the csv file is for panasonic. The JobId starts with I, R, D</p>
+                </div>
             </div>
         </section>
 
@@ -602,13 +575,18 @@
 
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.3.0/papaparse.min.js"></script>
-    <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+        crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/jquery/dist/jquery.min.js"></script>
     <script src="https://unpkg.com/bootstrap-table@1.22.1/dist/bootstrap-table.min.js"></script>
     <script src="https://unpkg.com/tableexport.jquery.plugin/tableExport.min.js"></script>
-    <script src="https://unpkg.com/bootstrap-table@1.22.1/dist/extensions/export/bootstrap-table-export.min.js"></script>
-    <script src="https://unpkg.com/bootstrap-table@1.22.1/dist/extensions/filter-control/bootstrap-table-filter-control.min.js"></script>
+    <script
+        src="https://unpkg.com/bootstrap-table@1.22.1/dist/extensions/export/bootstrap-table-export.min.js"></script>
+    <script
+        src="https://unpkg.com/bootstrap-table@1.22.1/dist/extensions/filter-control/bootstrap-table-filter-control.min.js"></script>
 
 
     <!-- Template Main JS File -->
