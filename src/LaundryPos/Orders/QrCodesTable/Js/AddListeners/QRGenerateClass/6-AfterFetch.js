@@ -1,5 +1,5 @@
 let StartFunc = async ({ inFromFetch }) => {
-    if (inFromFetch === false) {
+    if (inFromFetch.KTF === false) {
         Swal.fire({
             icon: 'warning',
             title: 'Raised',

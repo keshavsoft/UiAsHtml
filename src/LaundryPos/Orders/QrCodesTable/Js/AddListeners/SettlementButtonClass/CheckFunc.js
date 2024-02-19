@@ -1,6 +1,3 @@
-// import { StartFunc as StartFuncFromLocalStorage } from "../../../../../../FromLocalStorage/OrdersData/FromBranchAndPk.js";
-// import ApiConfigJson from "../../../../../ApiConfig.json" assert {type: "json"};
-
 import { StartFunc as StartFuncItemsInOrder } from "../../../../../FromLocalStorage/ItemsInOrder/Bulk.js";
 
 import { StartFunc as StartFuncFromLocalStorage } from "../../../../../FromLocalStorage/OrdersData/FromPkToLocalStorage.js";
@@ -9,7 +6,7 @@ import { StartFunc as StartFuncToUrlWithoutDiscount } from "./ToUrlWithoutDiscou
 
 
 let StartFunc = ({ inBranchName, inOrderNumber }) => {
-    let jVarLocalBranchName = getUrlQueryParams({ inGetKey: "BranchName" });
+    let jVarLocalBranchName = inBranchName;
 
     let jVarLocalOrderNumber = inOrderNumber;
 
@@ -46,13 +43,5 @@ let jFlocalIsDiscountGiven = () => {
     return false;
 
 };
-
-let getUrlQueryParams = ({ inGetKey }) => {
-    const queryString = window.location.search;
-    const parameters = new URLSearchParams(queryString);
-    const value = parameters.get(inGetKey);
-    return value;
-};
-
 
 export { StartFunc };

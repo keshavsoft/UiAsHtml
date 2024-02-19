@@ -361,7 +361,6 @@
         }
 
         function jFLocalSettlementDetails(value, row, index) {
-            console.log("row:", row);
             if (row.IsSettled) {
                 return [
                     `<a href="#" data-ordernumber="${row.UuId}" data-BranchName="${row.OrderData.BranchName}" class="btn btn-danger SettlementButtonClass" >`,
@@ -401,7 +400,7 @@
                     `<path d="M7 12h1v3h4v1H7v-4Zm9 2v2h-3v-1h2v-1h1Z"></path>`,
                     `</svg>`,
                     ` `,
-                    `${row.QrCodes}`,
+                    `${row.TotalItems}`,
                     `</a>`
                 ].join('')
             } else {
@@ -435,12 +434,8 @@
         }
 
         function QrFormatter(data) {
-            var field = this.field
-            return data.map(function (row) {
-                return +row.QrCodes
-            }).reduce(function (sum, i) {
-                return sum + i
-            }, 0)
+           return data.map(ele => ele.TotalItems).reduce((a, b) => a + b, 0)
+
         }
     </script>
 
