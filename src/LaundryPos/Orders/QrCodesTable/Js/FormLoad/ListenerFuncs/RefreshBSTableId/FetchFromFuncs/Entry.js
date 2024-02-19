@@ -6,11 +6,11 @@ import { StartFunc as StartFuncQrCodesData } from "./AfterFetch/QrCodes/EntryFil
 
 let StartFunc = async () => {
     let jVarLocalDataNeeded = await StartFuncFetchFuncs();
-    // let jVarLocalQrCodeData = await StartFuncQrCodesData();
+    let jVarLocalQrCodeData = await StartFuncQrCodesData();
 
     if (jVarLocalDataNeeded !== null) {
         if (jVarLocalDataNeeded) {
-            StartFuncAfterFetch({ inDataToShow: jVarLocalDataNeeded });
+            StartFuncAfterFetch({ inDataToShow: jVarLocalDataNeeded, inQrCodeData: jVarLocalQrCodeData });
         };
     };
 };

@@ -1,5 +1,8 @@
-let StartFunc = async ({ inBodyData }) => {
-    let jVarLocalFetchUrl = `/bin/QrCodes/Generate/DataOnly`;
+let StartFunc = async ({ inPk }) => {
+    let jVarLocalinPk = inPk;
+
+    let jVarLocalFetchUrl = `/bin/Transactions/Kakinada/${jVarLocalinPk}`;
+    
     let response = await fetch(jVarLocalFetchUrl);
     let jVarLocalResponse = await response.json();
 
